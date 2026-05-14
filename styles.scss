@@ -124,3 +124,40 @@ h3 {
   color: $cornflower;
 }
 
+.search {
+  &__field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(63, 107, 170, 0.35);
+    background: $white;
+    padding: 8px 12px;
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: $black;
+
+  &__count {
+    min-width: 22px;
+    height: 22px;
+    padding-inline: 6px;
+    display: inline-grid;
+    place-items: center;
+    background: $lingonberry;
+    color: $white;
+    font-size: 0.8rem;
+  }
+}
+

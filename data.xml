@@ -51,4 +51,28 @@
     <case_thickness>12 мм</case_thickness>
   </item>
   <item>
+    <id>3</id>
+    <name>Petite Etoile</name>
+    <name_ru>Маленькая Звезда</name_ru>
+    <name_by>Маленькая Зорка</name_by>
+    <price>1180</price>
+    <image>watch/watch3.jpg</image>
+    <collection>Petite Etoile</collection>
+    <type>женские</type>
+    <movement>кварцевый (Ronnet 751)</movement>
+    <case_shape>овальная</case_shape>
+    <glass>минеральное с усилением</glass>
+    <dial_color>белый (перламутровый отлив)</dial_color>
+    <strap_material>итальянская кожа (лак)</strap_material>
+    <strap_color>белый</strap_color>
+    <case_color>золотистый (PVD-покрытие)</case_color>
+    <warranty>2 года</warranty>
+    <case_material>латунь с золотым напылением</case_material>
+    <case_width>28 мм</case_width>
+    <dial_type>аналоговый, римские цифры</dial_type>
+    <water_resistance>3 ATM (брызги)</water_resistance>
+    <strap_width>14 мм</strap_width>
+    <calendar>нет</calendar>
+    <case_thickness>8 мм</case_thickness>
+  </item>
 </catalog>

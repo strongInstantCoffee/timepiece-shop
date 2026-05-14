@@ -92,3 +92,66 @@ async function loadCatalogData() {
   return items;
 }
 
+function createSpecs(item) {
+  return Object.entries(SPEC_LABELS).map(([key, label]) => `<dt>${label}</dt><dd>${safe(item[key]) || "-"}</dd>`).join("");
+}
+
+function cardName(item) {
+  return `<h3>${item.name}</h3><p class="product-card__sub">${item.name_ru}</p><p class="product-card__sub">${item.name_by}</p>`;
+}
+
+function renderCatalog(items) {
+  const container = document.querySelector("#catalog-container");
+  if (!container) return;
+  container.innerHTML = items
+    .map((item) => `
+      <article class="product-card catalog-card" data-id="${item.id}" tabindex="0">
+        <img src="${item.image}" alt="${item.name}">
+        ${cardName(item)}
+        <p class="product-card__price">${byn(item.price)}</p>
+        <a class="btn-details" href="product.html?id=${item.id}">Подробнее</a>
+      </article>
+    `)
+    .join("");
+  container.querySelectorAll(".catalog-card").forEach((card) => {
+    const open = () => showProductDetail(card.dataset.id);
+    card.addEventListener("click", (event) => {
+      if (event.target.closest(".btn-details")) return;
+      open();
+    });
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") open();
+    });
+  });
+}
+
+function showProductDetail(itemId) {
+  const item = catalogItems.find((it) => it.id === String(itemId));
+  const list = document.querySelector("#catalog-container");
+  const panel = document.querySelector("#product-detail");
+  const content = document.querySelector("#product-detail-content");
+  if (!item || !list || !panel || !content) return;
+  list.style.display = "none";
+  panel.style.display = "block";
+  content.innerHTML = `
+    <article class="product-card product-card--detail">
+      <img src="${item.image}" alt="${item.name}">
+      ${cardName(item)}
+      <p class="product-card__price">${byn(item.price)}</p>
+      <dl class="specs-list">${createSpecs(item)}</dl>
+      <button class="btn-primary" id="add-detail-to-cart" type="button">В корзину</button>
+    </article>
+  `;
+  document.querySelector("#add-detail-to-cart")?.addEventListener("click", () => addToCart(item));
+}
+
+function backToCatalog() {
+  const list = document.querySelector("#catalog-container");
+  const panel = document.querySelector("#product-detail");
+  const content = document.querySelector("#product-detail-content");
+  if (!list || !panel || !content) return;
+  panel.style.display = "none";
+  content.innerHTML = "";
+  list.style.display = "grid";
+}
+

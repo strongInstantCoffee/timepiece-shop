@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap");
+$cornflower: #3f6baa;
+$linen: #f4f0e1;
+$lingonberry: #8b3a3d;
+$ochre: #c28b3e;
+$white: #ffffff;
+$black: #1a1a1a;
+$container-width: 1200px;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+

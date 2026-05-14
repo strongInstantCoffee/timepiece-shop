@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time World - Карточка товара</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__top">
+      <a class="logo" href="index.html"><strong class="logo__text">Time World</strong></a>
+      <form class="search" action="#" method="get" role="search"><label class="visually-hidden" for="product-search">Поиск</label><div class="search__field"><input id="product-search" type="search" placeholder="Поиск по каталогу"></div></form>
+      <a class="cart-link" href="cart.html">Корзина <span class="cart-link__count" id="cart-count">0</span></a>
+    </div>
+    <nav class="nav container" aria-label="Главное меню">
+      <ul class="nav__list">
+        <li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="about.html">О нас</a></li><li><a href="delivery.html">Доставка</a></li><li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Карточка товара</h1>
+    <section class="product-page" id="single-product-page">
+      <div class="product-page__image">
+        <img id="single-product-image" src="https://via.placeholder.com/560x420?text=Watch+Image" alt="Фото часов">
+      </div>
+      <div class="product-page__content">
+        <h2 id="single-product-name">Heritage Classic</h2>
+        <p class="product-card__sub" id="single-product-name-ru">Классика Наследия</p>
+        <p class="product-card__sub" id="single-product-name-by">Спадчынная класіка</p>
+        <p class="product-page__price" id="single-product-price">1490 BYN</p>
+        <div class="product-page__selectors">
+          <label>Цвет:
+            <select>
+              <option>Серебристый</option>
+              <option>Черный</option>
+              <option>Синий</option>
+            </select>
+          </label>
+          <label>Размер:
+            <select>
+              <option>38 мм</option>
+              <option selected>42 мм</option>
+              <option>44 мм</option>
+            </select>
+          </label>
+        </div>
+        <button id="add-single-to-cart" class="btn-primary" type="button">В корзину</button>
+        <dl id="single-product-specs" class="specs-list"></dl>
+      </div>
+    </section>
+
+    <section class="info-block">
+      <h3>Доставка и гарантия</h3>
+      <p>Доставка по Беларуси 1-3 дня. Гарантия официальная, обслуживание в сертифицированных центрах. Самовывоз доступен в Минске.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <section class="footer__contacts"><h2>Контакты</h2><p>Email: <a href="mailto:hello@timeworld.ru">hello@timeworld.ru</a></p><p>Телефон: <a href="tel:+375292725156">+375 (29) 272-51-56</a></p></section>
+      <p class="footer__meta">© 2026 Time World</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

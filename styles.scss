@@ -748,6 +748,9 @@ $footer-text: #C28B3E;
     grid-template-columns: 1fr;
   }
 
+  .promo-row {
+    flex-direction: column;
+  }
 
   .about-layout {
     grid-template-columns: 1fr;

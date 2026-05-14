@@ -155,3 +155,29 @@ function backToCatalog() {
   list.style.display = "grid";
 }
 
+function initSlider() {
+  const slider = document.querySelector("#promo-slider");
+  if (!slider) return;
+  const slides = Array.from(slider.querySelectorAll(".slide"));
+  const dots = Array.from(document.querySelectorAll(".slider__dot"));
+  const prev = slider.querySelector(".slider__arrow--prev");
+  const next = slider.querySelector(".slider__arrow--next");
+  let index = 0;
+  let timer;
+  const show = (value) => {
+    index = (value + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+  };
+  const start = () => {
+    clearInterval(timer);
+    timer = setInterval(() => show(index + 1), 5000);
+  };
+  prev?.addEventListener("click", () => show(index - 1));
+  next?.addEventListener("click", () => show(index + 1));
+  dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+  slider.addEventListener("mouseenter", () => clearInterval(timer));
+  slider.addEventListener("mouseleave", start);
+  start();
+}
+

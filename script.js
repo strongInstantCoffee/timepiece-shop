@@ -181,3 +181,43 @@ function initSlider() {
   start();
 }
 
+function renderCartPage() {
+  const list = document.querySelector("#cart-items");
+  const total = document.querySelector("#cart-total");
+  if (!list || !total) return;
+  const cart = readCart();
+  if (!cart.length) {
+    list.innerHTML = `<p>Корзина пуста. Перейдите в <a href="catalog.html">каталог</a>.</p>`;
+    total.textContent = "0 BYN";
+    return;
+  }
+  list.innerHTML = cart.map((item) => `
+    <article class="cart-item" data-id="${item.id}">
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-item__content">
+        <h3>${item.name}</h3>
+        <p class="product-card__sub">${item.name_ru}</p>
+        <p class="product-card__sub">${item.name_by}</p>
+        <p>${byn(item.price)}</p>
+        <label>Количество <input class="cart-item__qty" type="number" min="1" value="${item.quantity}"></label>
+        <p>Сумма: <strong>${byn(item.quantity * item.price)}</strong></p>
+        <button type="button" class="cart-item__remove">Удалить</button>
+      </div>
+    </article>`).join("");
+  list.querySelectorAll(".cart-item").forEach((row) => {
+    const id = row.dataset.id;
+    row.querySelector(".cart-item__qty")?.addEventListener("change", (e) => {
+      const value = Math.max(1, Number(e.target.value) || 1);
+      writeCart(readCart().map((item) => (item.id === id ? { ...item, quantity: value } : item)));
+      updateCartCounters();
+      renderCartPage();
+    });
+    row.querySelector(".cart-item__remove")?.addEventListener("click", () => {
+      writeCart(readCart().filter((item) => item.id !== id));
+      updateCartCounters();
+      renderCartPage();
+    });
+  });
+  total.textContent = byn(cart.reduce((sum, item) => sum + item.price * item.quantity, 0));
+}
+

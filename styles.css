@@ -83,4 +83,63 @@ h3 {
   font-family: "Caveat", "Inter", sans-serif;
   color: #3f6baa;
 }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(244, 240, 225, 0.96);
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid rgba(63, 107, 170, 0.25);
+}
+.header__top {
+  display: grid;
+  grid-template-columns: auto minmax(280px, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3f6baa;
+}
+
+.search__field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(63, 107, 170, 0.35);
+  background: #ffffff;
+  padding: 8px 12px;
+}
+.search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.cart-link__count {
+  min-width: 22px;
+  height: 22px;
+  padding-inline: 6px;
+  display: inline-grid;
+  place-items: center;
+  background: #8b3a3d;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
 }/*# sourceMappingURL=styles.css.map */

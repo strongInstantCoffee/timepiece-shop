@@ -1,3 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog>
+  <item>
+    <id>1</id>
+    <name>Heritage Classic</name>
+    <name_ru>Классика Наследия</name_ru>
+    <name_by>Спадчынная класіка</name_by>
+    <price>1490</price>
+    <image>watch/watch1.jpg</image>
+    <collection>Heritage Classic</collection>
+    <type>мужские</type>
+    <movement>автоматический (японский Miyota 8215)</movement>
+    <case_shape>круглая</case_shape>
+    <glass>сапфировое с антибликом</glass>
+    <dial_color>белый</dial_color>
+    <strap_material>натуральная кожа (телячья)</strap_material>
+    <strap_color>черный</strap_color>
+    <case_color>серебристый (полированная сталь)</case_color>
+    <warranty>3 года</warranty>
+    <case_material>нержавеющая сталь 316L</case_material>
+    <case_width>40 мм</case_width>
+    <dial_type>аналоговый, арабские цифры</dial_type>
+    <water_resistance>5 ATM (дождь, мытье рук)</water_resistance>
+    <strap_width>20 мм</strap_width>
+    <calendar>число (окошко на 3 часах)</calendar>
+    <case_thickness>11 мм</case_thickness>
+  </item>
+  <item>
 </catalog>

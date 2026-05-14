@@ -125,4 +125,29 @@
     <calendar>нет (чистый минимализм)</calendar>
     <case_thickness>7.2 мм</case_thickness>
   </item>
+  <item>
+    <id>6</id>
+    <name>Retro Drifter</name>
+    <name_ru>Ретро Странник</name_ru>
+    <name_by>Рэтра Вандроўнік</name_by>
+    <price>1430</price>
+    <image>watch/watch6.jpg</image>
+    <collection>Retro Drifter</collection>
+    <type>мужские</type>
+    <movement>механический с ручным заводом (Unitas 6497)</movement>
+    <case_shape>тонно (бочонок)</case_shape>
+    <glass>органическое (Plexiglass), состаренное</glass>
+    <dial_color>желтый (патина)</dial_color>
+    <strap_material>замша (велюр)</strap_material>
+    <strap_color>рыжий (охристый)</strap_color>
+    <case_color>бронза (живая)</case_color>
+    <warranty>2 года</warranty>
+    <case_material>бронза CuSn8</case_material>
+    <case_width>45 мм</case_width>
+    <dial_type>аналоговый, открытая секундная (small second)</dial_type>
+    <water_resistance>5 ATM (дождь)</water_resistance>
+    <strap_width>24 мм</strap_width>
+    <calendar>нет</calendar>
+    <case_thickness>14 мм</case_thickness>
+  </item>
 </catalog>

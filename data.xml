@@ -75,4 +75,29 @@
     <calendar>нет</calendar>
     <case_thickness>8 мм</case_thickness>
   </item>
+  <item>
+    <id>4</id>
+    <name>Racer Speed</name>
+    <name_ru>Скорость Гонки</name_ru>
+    <name_by>Гоначная Хуткасць</name_by>
+    <price>1590</price>
+    <image>watch/watch4.jpg</image>
+    <collection>Racer Speed</collection>
+    <type>мужские</type>
+    <movement>кварцевый хронограф (Seiko VK63)</movement>
+    <case_shape>круглая, с пульсатором</case_shape>
+    <glass>минеральное, выпуклое (Hesalite)</glass>
+    <dial_color>белый (три дополнительных субциферблата)</dial_color>
+    <strap_material>силикон (гипоаллергенный)</strap_material>
+    <strap_color>красный</strap_color>
+    <case_color>черный (PVD)</case_color>
+    <warranty>2 года</warranty>
+    <case_material>нержавеющая сталь с черным покрытием</case_material>
+    <case_width>44 мм</case_width>
+    <dial_type>аналоговый, хронограф (12-часовой, 30-минутный, 60-секундный)</dial_type>
+    <water_resistance>10 ATM (плавание, серфинг)</water_resistance>
+    <strap_width>22 мм</strap_width>
+    <calendar>число (на 4 часах)</calendar>
+    <case_thickness>13 мм</case_thickness>
+  </item>
 </catalog>

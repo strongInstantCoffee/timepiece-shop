@@ -1,0 +1,295 @@
+/* Интеграция блока часов: все селекторы ограничены .clock-showcase (главная + main-time + clock.html через обёртку) */
+
+.clock-showcase .clock-module__panel {
+  position: relative;
+  background: #e6f0fa;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.clock-showcase .clock-clockface {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: #e6f0fa;
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-showcase .clock-clockface::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #e6f0fa;
+  border: 3px solid #2d5a27;
+  border-radius: 50%;
+  z-index: 100000;
+}
+
+.clock-showcase .clock-clockface span {
+  position: absolute;
+  inset: 20px;
+  color: #fef7e6;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock-showcase .clock-clockface span b {
+  font-size: 2em;
+  opacity: 1;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+  color: #fef7e6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.clock-showcase .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.clock-showcase .circle i {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  background: #2d5a27;
+  opacity: 0.9;
+  transform-origin: bottom;
+  transform: scaleY(0.5);
+}
+
+.clock-showcase .clock-clockface > .circle:nth-child(1) i {
+  width: 2px;
+  background: #2d5a27;
+}
+
+.clock-showcase .clock-clockface > .circle:nth-child(2) i {
+  width: 6px;
+  background: #2d5a27;
+}
+
+.clock-showcase .circle2 {
+  width: 240px;
+  height: 240px;
+  z-index: 9;
+}
+
+.clock-showcase .circle3 {
+  width: 180px;
+  height: 180px;
+  z-index: 8;
+}
+
+.clock-showcase .circle3 i {
+  background: #1e3d1a;
+}
+
+.clock-showcase .circle::before {
+  content: "";
+  position: absolute;
+  top: -8.5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2d5a27;
+  box-shadow: 0 0 10px #2d5a27, 0 0 40px #2d5a27;
+}
+
+.clock-showcase #time {
+  margin-top: 24px;
+  margin-bottom: 0;
+  display: flex;
+  transform: translateY(15px);
+  padding: 10px;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  background: #e6f0fa;
+}
+
+.clock-showcase #time div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: #2d5a27;
+}
+
+.clock-showcase #time div:nth-child(1)::after,
+.clock-showcase #time div:nth-child(2)::after {
+  content: ":";
+  position: absolute;
+  right: -4px;
+  color: #2d5a27;
+}
+
+.clock-showcase #time div:nth-child(2)::after {
+  animation: clock-colon-blink 1s steps(1) infinite;
+}
+
+@keyframes clock-colon-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clock-showcase .clock-module__panel {
+    border-radius: 10px;
+    padding: 16px;
+  }
+
+  .clock-showcase .clock-clockface {
+    width: 300px;
+    height: 300px;
+  }
+
+  .clock-showcase .clock-clockface span {
+    inset: 15px;
+  }
+
+  .clock-showcase .clock-clockface span b {
+    font-size: 1.5em;
+  }
+
+  .clock-showcase .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .clock-showcase .circle i {
+    height: 40%;
+  }
+
+  .clock-showcase .clock-clockface > .circle:nth-child(1) i {
+    width: 1px;
+  }
+
+  .clock-showcase .clock-clockface > .circle:nth-child(2) i {
+    width: 3px;
+  }
+
+  .clock-showcase .circle2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .clock-showcase .circle3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .clock-showcase .circle::before {
+    top: -6.5px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .clock-showcase #time {
+    font-size: 1.5em;
+    padding: 5px;
+  }
+
+  .clock-showcase #time div {
+    width: 50px;
+  }
+
+  .clock-showcase #time div:last-child {
+    font-size: 0.4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .clock-showcase .clock-module__panel {
+    border-radius: 0;
+  }
+
+  .clock-showcase .clock-clockface {
+    width: 200px;
+    height: 200px;
+  }
+
+  .clock-showcase .clock-clockface span {
+    inset: 10px;
+  }
+
+  .clock-showcase .clock-clockface span b {
+    font-size: 1em;
+  }
+
+  .clock-showcase .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .clock-showcase .circle i {
+    height: 30%;
+  }
+
+  .clock-showcase .clock-clockface > .circle:nth-child(1) i {
+    width: 1px;
+  }
+
+  .clock-showcase .clock-clockface > .circle:nth-child(2) i {
+    width: 2px;
+  }
+
+  .clock-showcase .circle2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .clock-showcase .circle3 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .clock-showcase .circle::before {
+    top: -4.5px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .clock-showcase #time {
+    font-size: 1em;
+    padding: 2px;
+    transform: translateY(10px);
+  }
+
+  .clock-showcase #time div {
+    width: 40px;
+  }
+
+  .clock-showcase #time div:last-child {
+    font-size: 0.3em;
+  }
+}

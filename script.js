@@ -244,3 +244,33 @@ function initProductPage() {
   document.querySelector("#add-single-to-cart")?.addEventListener("click", () => addToCart(item));
 }
 
+function initHomeCards() {
+  const homeGrid = document.querySelector("#home-products");
+  if (!homeGrid || !catalogItems.length) return;
+  homeGrid.innerHTML = catalogItems.map((item) => `
+    <article class="product-card">
+      <img src="${item.image}" alt="${item.name}">
+      ${cardName(item)}
+      <p class="product-card__price">${byn(item.price)}</p>
+      <a class="btn-details" href="product.html?id=${item.id}">Подробнее</a>
+    </article>
+  `).join("");
+}
+
+async function init() {
+  updateCartCounters();
+  initSlider();
+  initCheckoutForm();
+  try {
+    catalogItems = await loadCatalogData();
+    renderCatalog(catalogItems);
+    initProductPage();
+    initHomeCards();
+  } catch (error) {
+    console.error("Ошибка загрузки XML:", error);
+  }
+  document.querySelector("#back-to-catalog")?.addEventListener("click", backToCatalog);
+  renderCartPage();
+}
+
+document.addEventListener("DOMContentLoaded", init);

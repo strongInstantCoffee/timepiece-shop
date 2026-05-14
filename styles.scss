@@ -19,6 +19,23 @@ $container-width: 1200px;
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: $black;
+  background-color: $linen;
+  background-image: linear-gradient(rgba(244, 240, 225, 0.72), rgba(244, 240, 225, 0.8)),
+    url("flax/grey-washed-wall.png");
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 1.5;
+}
+
 img {
   max-width: 100%;
   display: block;

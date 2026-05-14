@@ -64,3 +64,28 @@ textarea {
   border: 0;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Caveat", "Inter", sans-serif;
+  color: $cornflower;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(244, 240, 225, 0.96);
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid rgba(63, 107, 170, 0.25);
+
+  &__top {
+    display: grid;
+    grid-template-columns: auto minmax(280px, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 0;
+  }
+}
+

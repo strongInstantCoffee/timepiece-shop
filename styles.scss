@@ -191,3 +191,107 @@ main {
   padding: 32px 0 56px;
 }
 
+.hero-slider {
+  h1 {
+    margin-bottom: 20px;
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  &__track {
+    position: relative;
+    min-height: 420px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: $cornflower;
+    cursor: pointer;
+    z-index: 2;
+
+    &--prev {
+      left: 12px;
+    }
+
+    &--next {
+      right: 12px;
+    }
+
+    &:hover {
+      background: $lingonberry;
+      color: $white;
+    }
+  }
+
+  &__dots {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 11px;
+    height: 11px;
+    border: 0;
+    background: rgba(44, 94, 46, 0.35);
+    cursor: pointer;
+
+    &.is-active {
+      background: $lingonberry;
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  background: #c7ddee;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    max-width: 480px;
+    background: rgba(0, 0, 0, 0.45);
+    color: $white;
+    padding: 14px 16px;
+
+    h2 {
+      margin-bottom: 6px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+

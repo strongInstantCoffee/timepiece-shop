@@ -295,3 +295,30 @@ main {
   }
 }
 
+.categories,
+.products {
+  margin-top: 46px;
+
+  h2 {
+    margin-bottom: 16px;
+    font-size: 1.7rem;
+  }
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  padding: 20px;
+  border: 1px solid rgba(63, 107, 170, 0.25);
+  background: rgba(255, 255, 255, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+

@@ -669,3 +669,33 @@ $footer-text: #C28B3E;
   }
 }
 
+.page-content {
+  min-height: 60vh;
+  margin-top: 10px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.about-slogan {
+  font-size: 1.4rem;
+  color: $lingonberry;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.clock-showcase {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

@@ -26,4 +26,29 @@
     <case_thickness>11 мм</case_thickness>
   </item>
   <item>
+    <id>2</id>
+    <name>Field Officer</name>
+    <name_ru>Полевой Офицер</name_ru>
+    <name_by>Палявы Афіцэр</name_by>
+    <price>1320</price>
+    <image>watch/watch2.jpg</image>
+    <collection>Field Officer</collection>
+    <type>мужские</type>
+    <movement>кварцевый (Ronda 515)</movement>
+    <case_shape>круглая</case_shape>
+    <glass>минеральное, усиленное</glass>
+    <dial_color>белый (с люминесцентными метками)</dial_color>
+    <strap_material>нейлон (NATO)</strap_material>
+    <strap_color>коричневый</strap_color>
+    <case_color>матовый титан</case_color>
+    <warranty>2 года</warranty>
+    <case_material>титан Grade 2</case_material>
+    <case_width>42 мм</case_width>
+    <dial_type>аналоговый, 24-часовая разметка</dial_type>
+    <water_resistance>10 ATM (плавание)</water_resistance>
+    <strap_width>22 мм</strap_width>
+    <calendar>день недели + число</calendar>
+    <case_thickness>12 мм</case_thickness>
+  </item>
+  <item>
 </catalog>

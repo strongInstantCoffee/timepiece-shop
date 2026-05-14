@@ -100,4 +100,29 @@
     <calendar>число (на 4 часах)</calendar>
     <case_thickness>13 мм</case_thickness>
   </item>
+  <item>
+    <id>5</id>
+    <name>Slim Contour</name>
+    <name_ru>Тонкий Контур</name_ru>
+    <name_by>Тонкі Контур</name_by>
+    <price>1710</price>
+    <image>watch/watch5.jpg</image>
+    <collection>Slim Contour</collection>
+    <type>унисекс</type>
+    <movement>ультратонкий автоматический (ETA 2892)</movement>
+    <case_shape>подушка (cushion)</case_shape>
+    <glass>сапфировое, трехслойное AR</glass>
+    <dial_color>черный (солнечный луч)</dial_color>
+    <strap_material>аллигаторовая кожа (тиснение)</strap_material>
+    <strap_color>серебряный (светло-серый)</strap_color>
+    <case_color>розовое золото</case_color>
+    <warranty>3 года</warranty>
+    <case_material>сталь с 5N розовым золотом</case_material>
+    <case_width>39 мм</case_width>
+    <dial_type>аналоговый, индексный (батон)</dial_type>
+    <water_resistance>3 ATM (брызги)</water_resistance>
+    <strap_width>18 мм</strap_width>
+    <calendar>нет (чистый минимализм)</calendar>
+    <case_thickness>7.2 мм</case_thickness>
+  </item>
 </catalog>

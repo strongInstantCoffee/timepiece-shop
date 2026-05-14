@@ -64,6 +64,15 @@ textarea {
   border: 0;
 }
 
+.container {
+  width: min(100% - 32px, $container-width);
+  margin-inline: auto;
+
+  @include mobile {
+    width: calc(100% - 24px);
+  }
+}
+
 h1,
 h2,
 h3 {
